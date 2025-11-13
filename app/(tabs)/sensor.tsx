@@ -1,6 +1,6 @@
 import styles from "@/constants/appStyles";
 //import { Link } from 'expo-router';
-import { Button, ScrollView, Text, TextInput, View, } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 export default function index() {
   return (
     <ScrollView style = {styles.container}>
@@ -9,6 +9,7 @@ export default function index() {
         </Link> */}
     <View >
       <Text style= {styles.heading}>Hello Wolrd</Text>
+      <Text>Hello Sensor page</Text>
       <Text>Hello Wolrd</Text>
       <Text>Hello Wolrd</Text>
       <Text>Hello Wolrd</Text>
@@ -17,22 +18,9 @@ export default function index() {
       <Text>Hello Wolrd</Text>
       <Text>Hello Wolrd</Text>
       <Text>Hello Wolrd</Text>
-      <Text>Hello Wolrd</Text>
- <View>
-
-    <Text style ={styles.label}>Email</Text>
-    <TextInput onChange={(e) =>console.log(e.nativeEvent.text)}
-    inputMode="email" style = {styles.textInput} placeholder="Enter your email here"></TextInput>
- </View>
- <View>
-    <Text style ={styles.label}>Password</Text>
-    <TextInput keyboardType= "default" style = {styles.textInput} placeholder="Enter your password here"></TextInput>
  </View>
 
- <View>
-    <Button title ="Submit"/>
- </View>
-    </View>
+    
     </ScrollView>
 
   )

@@ -1,35 +1,44 @@
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { Tabs } from 'expo-router';
-import React from 'react';
-
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
-import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <Tabs
-      screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+    <Tabs screenOptions={{
+        // Sets the title AND icon color when the tab is selected/active
+        tabBarActiveTintColor: 'orange', 
+        // Sets the title AND icon color when the tab is not selected
+        tabBarInactiveTintColor: '000000', // Light gray color
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name='home' color={color} />,
         }}
+        
+        
       />
       <Tabs.Screen
-        name="explore"
+        name="profile"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name='person' color={color} />,
         }}
+        
+        
       />
+
+      <Tabs.Screen
+        name="sensor"
+        options={{
+          title: 'Sensor',
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name='sensors' color={color} />,
+        }}
+        
+        
+      />
+     
     </Tabs>
   );
 }
