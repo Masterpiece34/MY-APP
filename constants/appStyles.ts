@@ -3,19 +3,19 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
 container:{
     padding: 16,
-    backgroundColor:"#A3B087"
+    backgroundColor:"#777C6D"
 
 },
 
 
 heading:{
-   color: "white",
+   color: "#FFF7DD",
    fontSize: 24,
    fontWeight: "bold"
 },
 
 text:{
-    color: "white",
+    color: "#FFF7DD",
     fontSize: 16,
 },
 
@@ -30,5 +30,9 @@ textInput:{
     fontSize: 16,
     fontWeight: "bold",
     marginBottom: 4,
+ },
+
+ button:{
+    backgroundColor: "black"
  }
 });
